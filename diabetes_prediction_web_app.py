@@ -7,7 +7,6 @@ Created on Wed Apr 26 12:19:28 2023
 
 import numpy as np
 import pickle
-import sklearn
 import streamlit as st
 
 ## Loading the saved model 
