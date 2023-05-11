@@ -26,9 +26,9 @@ def diabetes_prediction(input_data):
     print(prediction)
 
     if prediction[0]== 0:
-        return "The person is Non-diabetic"
+        return "Non-diabetic"
     else:
-        return "The person is Diabetic"
+        return "Diabetic"
     
 st.write("""
     ### Input Data Information
@@ -42,7 +42,35 @@ st.write("""
     - Age: Age, a known risk factor for type 2 diabetes.
 """)    
     
-    
+
+# Creating a function to provide advice for non-diabetic people
+def non_diabetic_advice(BMI, glucose_level, diastolic_bp):
+
+    advice = "Based on your information, here is some advice for you:"
+
+    if BMI >= 18.5 and BMI <= 24.9:
+        advice += "Your BMI is in the healthy range. "
+    elif BMI < 18.5:
+        advice += "Your BMI is too low. You may want to consider gaining some weight. "
+    else:
+        advice += "Your BMI is too high. You may want to consider losing some weight. "
+
+    if glucose_level < 100:
+        advice += "Your glucose level is normal. "
+    elif glucose_level >= 100 and glucose_level < 126:
+        advice += "Your glucose level is higher than normal. You may be at risk for developing diabetes. Please consult with your healthcare provider. "
+    else:
+        advice += "Your glucose level is very high. You may have diabetes. Please consult with your healthcare provider. "
+
+   if diastolic_bp < 80:
+        advice += "Your diastolic blood pressure is normal. "
+   elif diastolic_bp >= 80 and diastolic_bp < 90:
+        advice += "Your diastolic blood pressure is higher than normal. You may be at risk for developing hypertension. Please consult with your healthcare provider. "
+   else:
+        advice += "Your diastolic blood pressure is very high. You may have hypertension. Please consult with your healthcare provider. "
+
+    return advice
+
 def main():
     
     # Giving a title
@@ -65,8 +93,19 @@ def main():
     # Creating a button for prediction
     if st.button("Diabetes Test Results"):
         diagnosis= diabetes_prediction([Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age])
+                
+        if diagnosis == "Non-diabetic":
+            bmi = float(bmi)
+            glucose_level = int(glucose)
+            diastolic_bp = int(diastolic_bp)
+
+            advice = non_diabetic_advice(bmi, glucose_level, diastolic_bp)
+
+            st.success("You are " + diagnosis + ". " + advice)
+        else:
+            st.success("You are " + diagnosis + ".")
     
-    st.success(diagnosis)    
+   
     
 if __name__ =="__main__":
     main()
