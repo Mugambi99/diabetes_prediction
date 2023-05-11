@@ -30,6 +30,17 @@ def diabetes_prediction(input_data):
     else:
         return "The person is Diabetic"
     
+st.write("""
+    ### Input Data Information
+    - Pregnancy: Number of times the patient has been pregnant. 
+    - Glucose: Patient's fasting blood glucose level.
+    - Blood Pressure: Patient's blood pressure.
+    - Skin Thickness: Thickness of the patient's skinfold at the triceps.
+    - Insulin: Patient's insulin level.
+    - BMI: Patient's body mass index (BMI).
+    - Diabetes Pedigree Function: Genetic risk of diabetes based on family history.
+    - Age: Patient's age.
+""")    
     
     
 def main():
