@@ -42,6 +42,11 @@ st.write("""
     - Age: Age, a known risk factor for type 2 diabetes.
 """)    
     
+# Function to calculate BMI
+def calculate_bmi(height_in_inches, weight_in_kgs):
+    height_in_meters = height_in_inches / 39.37
+    bmi = weight_in_kgs / (height_in_meters ** 2)
+    return bmi
 
 # Creating a function to provide advice for non-diabetic people
 def non_diabetic_advice(BMI, glucose_level, diastolic_bp):
@@ -84,9 +89,18 @@ def main():
     BloodPressure= st.text_input("Blood pressure value")
     SkinThickness= st.text_input("Skin thickness value")
     Insulin= st.text_input("Insulin value")
-    BMI= st.text_input("BMI value")
+    height = st.text_input("Height (inches)")
+    weight = st.text_input("Weight (Kg's)")
     DiabetesPedigreeFunction= st.text_input("DiabetesPedigreeFunction value")
     Age= st.text_input("Age of the person")
+    BMI = ""
+    
+    # Creating a button to calculate BMI
+    if st.button("Calculate BMI"):
+        BMI = calculate_bmi(float(height), float(weight))
+    
+    # Displaying the calculated BMI
+    st.write("BMI: ", BMI)
     
     # Code for Prediction
     diagnosis= ""
