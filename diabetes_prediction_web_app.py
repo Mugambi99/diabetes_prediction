@@ -41,7 +41,10 @@ st.write("""
     - Diabetes Pedigree Function: Genetic risk of diabetes based on family history.
     - Age: Age, a known risk factor for type 2 diabetes.
 """)    
-    
+st.write("Please put your Height and weight")
+
+height= st.text_input("Your Height in Foot")
+weight= st.text_input("Your weight in KG")
 # Function to calculate BMI
 def calculate_bmi(height, weight):
     height_in_meters = float(height) * 0.3048
@@ -88,10 +91,8 @@ def main():
     Glucose= st.text_input("The Glucose level")
     BloodPressure= st.text_input("Blood pressure value")
     SkinThickness= st.text_input("Skin thickness value")
-    Insulin= st.text_input("Insulin value")
-    height = st.text_input("Height (Foot)")
-    weight = st.text_input("Weight (Kg's)")
-    BMI = []
+    Insulin= st.text_input("Insulin value")   
+    BMI = st.text_input("Insert the calculated BMI value")
     DiabetesPedigreeFunction= st.text_input("DiabetesPedigreeFunction value")
     Age= st.text_input("Age of the person")
     
