@@ -104,10 +104,10 @@ def main():
     Pregnancies= st.text_input("Number of Pregnancies")
     Glucose= st.text_input("The Glucose level")
     BloodPressure= st.text_input("Blood pressure value")
-    SkinThickness= st.text_input("Skin thickness value")
+    SkinThickness= st.text_input("Skin thickness value (in mm) (Optional)", value='23')
     Insulin= st.text_input("Insulin value")   
     BMI = st.text_input("Insert the calculated BMI value")
-    DiabetesPedigreeFunction= st.text_input("DiabetesPedigreeFunction value")
+    DiabetesPedigreeFunction= st.text_input("DiabetesPedigreeFunction value (Optional)", value='0.47')
     Age= st.text_input("Age of the person")
     
     
