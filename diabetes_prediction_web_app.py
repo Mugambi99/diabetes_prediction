@@ -41,7 +41,7 @@ st.write("""
     - Diabetes Pedigree Function: Genetic risk of diabetes based on family history.
     - Age: Age, a known risk factor for type 2 diabetes.
 """)    
-st.write("Please put your Height and weight")
+
 insulin_known = st.checkbox("Do you know your insulin value?")
 insulin_value = None
     
@@ -54,8 +54,10 @@ else:
     insulin_range = list(range(50, 300, 10))
     insulin_value = st.selectbox("Insulin value", insulin_range)
 
+st.write("### Please put your Height and weight")
 height= st.text_input("Your Height in Foot")
 weight= st.text_input("Your weight in KG")
+
 # Function to calculate BMI
 def calculate_bmi(height, weight):
     height_in_meters = float(height) * 0.3048
