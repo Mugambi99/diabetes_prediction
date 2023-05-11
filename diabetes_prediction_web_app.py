@@ -45,14 +45,15 @@ st.write("Please put your Height and weight")
 insulin_known = st.checkbox("Do you know your insulin value?")
 insulin_value = None
     
-    # If the user knows their insulin value, get the input
-    if insulin_known:
-        insulin_value = st.text_input("Insulin value")
+# If the user knows their insulin value, get the input
+if insulin_known:
+    insulin_value = st.text_input("Insulin value")
     
-    # If the user does not know their insulin value, provide a range to select from
-    else:
-        insulin_range = list(range(50, 300, 10))
-        insulin_value = st.selectbox("Insulin value", insulin_range)
+# If the user does not know their insulin value, provide a range to select from
+else:
+    insulin_range = list(range(50, 300, 10))
+    insulin_value = st.selectbox("Insulin value", insulin_range)
+
 height= st.text_input("Your Height in Foot")
 weight= st.text_input("Your weight in KG")
 # Function to calculate BMI
