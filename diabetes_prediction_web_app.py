@@ -44,8 +44,8 @@ st.write("""
     
 # Function to calculate BMI
 def calculate_bmi(height, weight):
-    height_in_meters = height * 0.0254
-    bmi = weight / (height_in_meters ** 2)
+    height_in_meters = float(height) * 0.0254
+    bmi = float(weight) / (height_in_meters ** 2)
     return bmi
 
 # Creating a function to provide advice for non-diabetic people
