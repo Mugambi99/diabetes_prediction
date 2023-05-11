@@ -96,7 +96,7 @@ def main():
     BMI = []
     
     # Creating a button to calculate BMI
-   if st.button("Calculate BMI"):
+    if st.button("Calculate BMI"): 
         BMI = calculate_bmi(height, weight)
         st.write("Your BMI is:", round(BMI, 2))
     
