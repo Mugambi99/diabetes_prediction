@@ -44,7 +44,7 @@ st.write("""
     
 # Function to calculate BMI
 def calculate_bmi(height, weight):
-    height_in_meters = float(height) * 0.0254
+    height_in_meters = float(height) * 1.8288
     bmi = float(weight) / (height_in_meters ** 2)
     return bmi
 
@@ -89,7 +89,7 @@ def main():
     BloodPressure= st.text_input("Blood pressure value")
     SkinThickness= st.text_input("Skin thickness value")
     Insulin= st.text_input("Insulin value")
-    height = st.text_input("Height (inches)")
+    height = st.text_input("Height (Foot)")
     weight = st.text_input("Weight (Kg's)")
     DiabetesPedigreeFunction= st.text_input("DiabetesPedigreeFunction value")
     Age= st.text_input("Age of the person")
