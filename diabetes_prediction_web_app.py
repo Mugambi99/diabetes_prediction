@@ -29,7 +29,8 @@ def diabetes_prediction(input_data):
         return "Non-diabetic"
     else:
         return "Diabetic"
-    
+st.title("Diabetes Prediction Web App")    
+
 st.write("""
     ### Input Data Information
     - Pregnancy: Number of times the patient has been pregnant. This can have an impact on a woman's blood sugar levels and insulin resistance.
@@ -47,7 +48,7 @@ insulin_value = None
     
 # If the user knows their insulin value, get the input
 if insulin_known:
-    insulin_value = st.text_input("Insulin value")
+    insulin_value = st.text_input("Insulin_value")
     
 # If the user does not know their insulin value, provide a range to select from
 else:
@@ -96,7 +97,7 @@ def non_diabetic_advice(BMI, glucose_level, diastolic_bp):
 def main():
     
     # Giving a title
-    st.title("Diabetes Prediction Web App")
+    st.title("Diabetes Prediction Model")
     
     # Getting the input data from the user 
     
