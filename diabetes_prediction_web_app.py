@@ -32,14 +32,14 @@ def diabetes_prediction(input_data):
     
 st.write("""
     ### Input Data Information
-    - Pregnancy: Number of times the patient has been pregnant. 
-    - Glucose: Patient's fasting blood glucose level.
-    - Blood Pressure: Patient's blood pressure.
-    - Skin Thickness: Thickness of the patient's skinfold at the triceps.
-    - Insulin: Patient's insulin level.
-    - BMI: Patient's body mass index (BMI).
+    - Pregnancy: Number of times the patient has been pregnant. This can have an impact on a woman's blood sugar levels and insulin resistance.
+    - Glucose: Fasting blood glucose level, a key indicator of diabetes.
+    - Blood Pressure: Blood pressure, a common comorbidity associated with diabetes.
+    - Skin Thickness: Thickness of skinfold at the triceps, an indicator of body fat composition, which is a risk factor for type 2 diabetes.
+    - Insulin: Insulin level, an indicator of insulin sensitivity and metabolic health.
+    - BMI: Body mass index, a measure of body fat based on height and weight. High BMI is a common risk factor for type 2 diabetes and other obesity-related health problems.
     - Diabetes Pedigree Function: Genetic risk of diabetes based on family history.
-    - Age: Patient's age.
+    - Age: Age, a known risk factor for type 2 diabetes.
 """)    
     
     
