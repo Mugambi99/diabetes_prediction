@@ -96,11 +96,11 @@ def main():
         diagnosis= diabetes_prediction([Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age])
                 
         if diagnosis == "Non-diabetic":
-            bmi = float(bmi)
-            glucose_level = int(glucose)
-            diastolic_bp = int(diastolic_bp)
+            BMI = float(BMI)
+            glucose_level = int(Glucose)
+            diastolic_bp = int(BloodPressure)
 
-            advice = non_diabetic_advice(bmi, glucose_level, diastolic_bp)
+            advice = non_diabetic_advice(BMI, glucose_level, diastolic_bp)
 
             st.success("You are " + diagnosis + ". " + advice)
         else:
