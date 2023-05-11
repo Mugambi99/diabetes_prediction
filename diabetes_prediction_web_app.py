@@ -91,9 +91,10 @@ def main():
     Insulin= st.text_input("Insulin value")
     height = st.text_input("Height (Foot)")
     weight = st.text_input("Weight (Kg's)")
+    BMI = []
     DiabetesPedigreeFunction= st.text_input("DiabetesPedigreeFunction value")
     Age= st.text_input("Age of the person")
-    BMI = []
+    
     
     # Creating a button to calculate BMI
     if st.button("Calculate BMI"): 
@@ -105,7 +106,7 @@ def main():
     
     # Creating a button for prediction
     if st.button("Diabetes Test Results"):
-        diagnosis= diabetes_prediction([Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, DiabetesPedigreeFunction, Age], BMI)
+        diagnosis= diabetes_prediction([Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI ,DiabetesPedigreeFunction, Age])
                 
         if diagnosis == "Non-diabetic":
             BMI = float(BMI)
