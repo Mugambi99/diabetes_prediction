@@ -43,7 +43,8 @@ st.write("""
     - Age: Age, a known risk factor for type 2 diabetes.
 """)    
 
-insulin_known = st.checkbox("Do you know your insulin value?")
+st.write("Your insulin value depends on various factors such as diet, exercise, and other health conditions.")
+insulin_known = st.checkbox("#### Do you know your insulin value?")
 insulin_value = None
     
 # If the user knows their insulin value, get the input
