@@ -105,7 +105,7 @@ def main():
     
     # Creating a button for prediction
     if st.button("Diabetes Test Results"):
-        diagnosis= diabetes_prediction([Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age])
+        diagnosis= diabetes_prediction([Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, DiabetesPedigreeFunction, Age], BMI)
                 
         if diagnosis == "Non-diabetic":
             BMI = float(BMI)
