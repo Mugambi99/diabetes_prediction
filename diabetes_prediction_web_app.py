@@ -43,9 +43,9 @@ st.write("""
 """)    
     
 # Function to calculate BMI
-def calculate_bmi(height_in_inches, weight_in_kgs):
-    height_in_meters = height_in_inches / 39.37
-    bmi = weight_in_kgs / (height_in_meters ** 2)
+def calculate_bmi(height, weight):
+    height_in_meters = height * 0.0254
+    bmi = weight / (height_in_meters ** 2)
     return bmi
 
 # Creating a function to provide advice for non-diabetic people
@@ -93,14 +93,12 @@ def main():
     weight = st.text_input("Weight (Kg's)")
     DiabetesPedigreeFunction= st.text_input("DiabetesPedigreeFunction value")
     Age= st.text_input("Age of the person")
-    BMI = ""
+    BMI = []
     
     # Creating a button to calculate BMI
-    if st.button("Calculate BMI"):
-        BMI = calculate_bmi(float(height), float(weight))
-    
-    # Displaying the calculated BMI
-    st.write("BMI: ", BMI)
+   if st.button("Calculate BMI"):
+        BMI = calculate_bmi(height, weight)
+        st.write("Your BMI is:", round(BMI, 2))
     
     # Code for Prediction
     diagnosis= ""
