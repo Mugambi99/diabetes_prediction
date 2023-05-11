@@ -43,8 +43,8 @@ st.write("""
     - Age: Age, a known risk factor for type 2 diabetes.
 """)    
 
-st.write("Your insulin value depends on various factors such as diet, exercise, and other health conditions.")
-insulin_known = st.checkbox("#### Do you know your insulin value?")
+st.write("#### Your insulin value depends on various factors such as diet, exercise, and other health conditions.")
+insulin_known = st.checkbox("Do you know your insulin value?")
 insulin_value = None
     
 # If the user knows their insulin value, get the input
@@ -56,7 +56,7 @@ else:
     insulin_range = list(range(50, 300, 10))
     insulin_value = st.selectbox("Insulin value", insulin_range)
 
-st.write("### Please put your Height and weight")
+st.write("### Please put your Height and weight. Calculate the BMI and insert to the Prediction model.")
 height= st.text_input("Your Height in Foot")
 weight= st.text_input("Your weight in KG")
 
