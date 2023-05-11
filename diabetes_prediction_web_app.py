@@ -56,19 +56,20 @@ def non_diabetic_advice(BMI, glucose_level, diastolic_bp):
         advice += "Your BMI is too high. You may want to consider losing some weight. "
 
     if glucose_level < 100:
+        
         advice += "Your glucose level is normal. "
     elif glucose_level >= 100 and glucose_level < 126:
         advice += "Your glucose level is higher than normal. You may be at risk for developing diabetes. Please consult with your healthcare provider. "
     else:
         advice += "Your glucose level is very high. You may have diabetes. Please consult with your healthcare provider. "
 
-   if diastolic_bp < 80:
+    if diastolic_bp < 80:
         advice += "Your diastolic blood pressure is normal. "
-   elif diastolic_bp >= 80 and diastolic_bp < 90:
+    elif diastolic_bp >= 80 and diastolic_bp < 90:
         advice += "Your diastolic blood pressure is higher than normal. You may be at risk for developing hypertension. Please consult with your healthcare provider. "
-   else:
+    else:
         advice += "Your diastolic blood pressure is very high. You may have hypertension. Please consult with your healthcare provider. "
-
+        
     return advice
 
 def main():
